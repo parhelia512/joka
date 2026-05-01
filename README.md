@@ -136,9 +136,10 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `GrowingArena`: Growing linear allocator
 - `MemoryContext`: Allocator API
 - `NumericRange`: Number sequence
-- `SliceRange`: Slice view
+- `ArrayRange`: Array view
 - `EnumeratedRange`: Indexed sequence
-- `TransformedRange`: Map or filter result
+- `MapRange`: Map result
+- `FilterRange`: Filter result
 - `ArgTokenRange`: Command-line arguments
 
 ### WebAssembly
