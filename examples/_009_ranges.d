@@ -13,8 +13,8 @@ void main(string[] args) {
     // 2. Keep only values greater than 4.
     // 3. Sum the remaining values.
     auto result = range(1, 5)
-        .map((Int x) => x * 2)
-        .filter((Int x) => x > 4)
-        .reduce((Int a, Int b) => a + b, 0);
+        .map((int x) => x * 2)
+        .filter((int x) => x > 4)
+        .reduce((int a, int b) => a + b, 0);
     println("The result is: ", result);
 }
