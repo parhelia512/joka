@@ -118,6 +118,7 @@ Start with the [examples](./examples/) folder for a quick overview.
 
 ### Types
 
+- `GenIndex`: Generational index
 - `ForeignSlice`: Non-D slice
 - `Fault`: Error code
 - `Maybe`: Optional value + error code
@@ -140,6 +141,8 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `EnumeratedRange`: Indexed sequence
 - `MapRange`: Map result
 - `FilterRange`: Filter result
+- `TakeRange`: Take result
+- `ChainRange`: Chain result
 - `ArgTokenRange`: Command-line arguments
 
 ### WebAssembly
