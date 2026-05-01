@@ -81,4 +81,8 @@ void main(string[] args) {
     // last
     assert(range(0, 5).last == 4);
     assert(range(1, 2).last == 1);
+
+    // sum/product
+    assert(range(1, 6).sum == 15);
+    assert(range(1, 6).product == 120);
 }
