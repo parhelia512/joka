@@ -143,7 +143,10 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `FilterRange`: Filter result
 - `TakeRange`: Take result
 - `ChainRange`: Chain result
-- `ArgTokenRange`: Command-line arguments
+- `StrideRange`: Stride result
+- `AccumulateRange`: Accumulate result
+- `ChunksRange`: Chunks result
+- `ArgRange`: Command-line arguments
 
 ### WebAssembly
 

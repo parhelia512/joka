@@ -5,11 +5,11 @@ import joka;
 void main(string[] args) {
     println("Arguments:");
     if (args.length == 1) println(" None");
-    foreach (token; ArgTokenRange(args[1 .. $])) {
+    foreach (token; ArgRange(args[1 .. $])) {
         with (ArgType) final switch (token.type) {
-            case singleItem: printfln(" Single Item: {}", token); break;
-            case shortOption: printfln(" Short Option: {}", token); break;
-            case longOption: printfln(" Long Option: {}", token); break;
+            case singleItem:  println(" Single Item: ", token.name); break;
+            case shortOption: println(" Short Option: ", token.name); break;
+            case longOption:  println(" Long Option: ", token.name); break;
         }
     }
     println();

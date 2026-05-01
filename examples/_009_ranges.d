@@ -85,4 +85,22 @@ void main(string[] args) {
     // sum/product
     assert(range(1, 6).sum == 15);
     assert(range(1, 6).product == 120);
+
+    // StrideRange
+    assert(range(0, 10).stride(3).reduce((int a, int b) => a + b, 0) == 18);
+    assert(range(0, 10).stride(1).reduce((int a, int b) => a + b, 0) == 45);
+
+    // AccumulateRange
+    assert(range(1, 5).accumulate((int a, int b) => a + b, 0).last == 10);
+    assert(range(1, 5).reduce((int a, int b) => a + b, 0) == 10);
+
+    // ChunksRange
+    auto c = range(0, 6).chunks(2);
+    assert(c.front.sum == 1);
+    c.popFront();
+    assert(c.front.sum == 5);
+    c.popFront();
+    assert(c.front.sum == 9);
+    c.popFront();
+    assert(c.empty == true);
 }
