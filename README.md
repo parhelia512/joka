@@ -21,7 +21,7 @@ void main() {
 
 - **Minimalistic**: Avoids many abstractions
 - **Modular**: Has minimal cross-module dependencies
-- **Simple**: Uses basic structs for everything
+- **Fast**: Very blazingly fast
 - **BetterC**: Fully compatible via `-betterC -i`
 - **WebAssembly**: Lightweight enough to run on a single 64KB page
 
@@ -150,7 +150,7 @@ Start with the [examples](./examples/) folder for a quick overview.
 
 ### WebAssembly
 
-Joka supports WebAssembly via the `-betterC -i` flags and integrates seamlessly with  [Emscripten](https://emscripten.org/) and [Wasmtime](https://wasmtime.dev/).
+Joka supports WebAssembly via the `-betterC -i` flags and integrates seamlessly with [Emscripten](https://emscripten.org/) and [Wasmtime](https://wasmtime.dev/).
 For environments without those runtimes, you can still use some of Joka's modules by enabling "stubs."
 Check the [versions](#versions) section for more information about them.
 
@@ -311,13 +311,13 @@ For example, the `GrowingArena` type is using `jokaSystemMalloc` and `jokaSystem
 
 #### Intercepting third-party code
 
-One cited reason for such a system is the ability to [intercept third-party code](https://odin-lang.org/docs/faq/#what-is-the-context-system-for).
-That is a nice feature, but it's easily abusable.
-For example, the community around the Odin language relies on context changes for almost everything, even within their own APIs.
-Calling this "interception" is misleading when it is actually [the intended way](https://www.gingerbill.org/article/2025/12/15/odins-most-misunderstood-feature-context/#heading-3-7) to use the API.
-
-My recommendation is to avoid this kind of thing if you don't like spaghetti.
-Of course, this isn't a huge problem if you have full control over your dependencies.
+One cited reason for such a system is the ability to "intercept third-party code."
+Don't.
+It sounds nice, but it's an easy way to get leaky spaghetti code.
+A context system is essentially a global variable that you have to account for.
+It's like the PICO-8 API with its pen color, but for memory management and with scope magic.
+That's fine for a fantasy console.
+It's not fine for memory management.
 
 ### Why aren't some functions `@nogc`?
 
