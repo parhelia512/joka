@@ -13,7 +13,7 @@ void main() {
     assert(bs.none == false);
     assert(bs.any == true);
     assert(bs.all == true);
-    assert(bs.count == 1);
+    assert(bs.count == 64);
 
     bs.reset();
     assert(bs.none == true);
@@ -24,18 +24,25 @@ void main() {
     bs[0] = true;
     assert(bs[0] == true);
     assert(bs.count == 1);
+
     bs[3] = true;
     assert(bs[3] == true);
     assert(bs.count == 2);
 
+    bs[0] = false;
+    assert(bs[0] == false);
+    assert(bs.count == 1);
+
     bs.flip(3);
     assert(bs[3] == false);
+    assert(bs.none == true);
     bs.flip(7);
     assert(bs[7] == true);
+    assert(bs.count == 1);
 
     bs.reset();
     bs[1] = true;
     bs[5] = true;
     bs[62] = true;
-    assert(bs.count == 3);
+    assert(bs.count() == 3);
 }
