@@ -17,7 +17,7 @@ void main() {
     trace(slice.length);
 
     // Group allocations to make memory tracking clearer and more organized.
-    with (AllocationGroup("Part 3")) {
+    with (ScopedAllocationGroup("Part 3")) {
         jokaMakeSlice!char("I like D.").ptr.jokaFree();
         jokaMakeSlice!char("I also like C.").ptr.jokaFree();
     }
