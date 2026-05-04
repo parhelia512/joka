@@ -9,13 +9,13 @@ void main() {
     assert(bs.all == false);
     assert(bs.length == 0);
 
-    bs.set();
+    bs.fill();
     assert(bs.none == false);
     assert(bs.any == true);
     assert(bs.all == true);
     assert(bs.length == 64);
 
-    bs.reset();
+    bs.clear();
     assert(bs.none == true);
     assert(bs.any == false);
     assert(bs.all == false);
@@ -40,7 +40,7 @@ void main() {
     assert(bs[7] == true);
     assert(bs.length == 1);
 
-    bs.reset();
+    bs.clear();
     bs[1] = true;
     bs[5] = true;
     bs[62] = true;
@@ -48,14 +48,22 @@ void main() {
 
     Sz[3] expected = [1, 5, 62];
     Sz i = 0;
-    foreach (bit; bs.setBits) {
+    foreach (bit; bs.activeBits) {
         assert(bit == expected[i]);
         i += 1;
     }
     assert(i == 3);
 
-    bs.reset();
+    bs.clear();
     Sz testCount = 0;
-    foreach (bit; bs.setBits) testCount += 1;
+    foreach (bit; bs.activeBits) testCount += 1;
     assert(testCount == 0);
+
+    GBitSet!ubyte small;
+    assert(small.capacity == 8);
+    small[7] = true;
+    assert(small[7] == true);
+    assert(small.length == 1);
+    small.flip(7);
+    assert(small.none == true);
 }
