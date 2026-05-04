@@ -118,24 +118,53 @@ Start with the [examples](./examples/) folder for a quick overview.
 
 ### Types
 
+*This is not an exhaustive list. See the source for all available types.*
+
+#### Basics
+
 - `GenIndex`: Generational index
 - `ForeignSlice`: Non-D slice
+- `BitSet`: Static bit set
 - `Fault`: Error code
 - `Maybe`: Optional value + error code
 - `Option`: Optional value (generally prefer `Maybe`)
 - `Result`: Success or error value (generally prefer `Maybe`)
 - `Union`: Tagged union
+
+#### Arrays
+
 - `List`: Dynamic array
 - `BufferList`: Fixed-buffer array
 - `FixedList`: Stack-based array
 - `SparseList`: Sparse array
 - `GenList`: Generational array
 - `BitList`: Dynamic bit array
-- `BitSet`: Static bit set
 - `Grid`: 2D array
+
+#### Allocators
+
 - `Arena`: Fixed linear allocator
 - `GrowingArena`: Growing linear allocator
 - `MemoryContext`: Allocator API
+
+#### Math
+
+- `Vec2`: 2D vector
+- `Vec3`: 3D vector
+- `Vec4`: 4D vector
+- `Rgba`: RGBA color
+- `Rect`: 2D rectangle
+- `Circ`: 2D circle
+- `Line`: 2D line
+- `Rounding`: Rounding functions.
+- `Easing`: Easing functions.
+- `TweenMode`: Tween loop behavior
+- `Tween`: 1D tween
+- `Tween2`: 2D tween
+- `SmoothToggle`: Smooth transition state
+
+#### Ranges
+
 - `NumericRange`: Number sequence
 - `ArrayRange`: Array view
 - `EnumeratedRange`: Indexed sequence
@@ -146,7 +175,7 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `StrideRange`: Stride result
 - `AccumulateRange`: Accumulate result
 - `ChunksRange`: Chunks result
-- `ArgRange`: Command-line arguments
+- `ArgTokenRange`: Command-line arguments
 
 ### WebAssembly
 
