@@ -469,7 +469,3 @@ It's primarily used for [Parin](https://github.com/Kapendev/parin), a game engin
 ### Why use D without the GC?
 
 Because manual memory management is fun!
-
-### The end?
-
-[Yes.](https://youtu.be/jqKCwHHZH98?si=tWS3I68b8CaDzy-V)
