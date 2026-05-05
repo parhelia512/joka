@@ -130,9 +130,6 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `Option`: Optional value (generally prefer `Maybe`)
 - `Result`: Success or error value (generally prefer `Maybe`)
 - `Union`: Tagged union
-
-#### ASCII
-
 - `PathSepStyle`: Path separator
 - `StrPair`: String pair
 
