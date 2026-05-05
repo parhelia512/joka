@@ -28,7 +28,7 @@ void main() {
     println("Numbers:");
     foreach (i, number; numbers) {
         // The `xx` function will return something without fault checking.
-        // Use the `get` function if you want safer access.
+        // Use the `getOr` function if you want safer access.
         if (number.isSome) {
             printfln(" [{}]: {}", i, number.xx);
         } else {

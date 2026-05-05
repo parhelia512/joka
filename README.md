@@ -122,6 +122,7 @@ Start with the [examples](./examples/) folder for a quick overview.
 
 #### Basics
 
+- `IndexedValue`: Index + value
 - `GenIndex`: Generational index
 - `ForeignSlice`: Non-D slice
 - `BitSet`: Static bit set
