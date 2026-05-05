@@ -131,6 +131,11 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `Result`: Success or error value (generally prefer `Maybe`)
 - `Union`: Tagged union
 
+#### ASCII
+
+- `PathSepStyle`: Path separator
+- `StrPair`: String pair
+
 #### Arrays
 
 - `List`: Dynamic array
@@ -176,6 +181,15 @@ Start with the [examples](./examples/) folder for a quick overview.
 - `AccumulateRange`: Accumulate result
 - `ChunksRange`: Chunks result
 - `ArgTokenRange`: Command-line arguments
+
+#### Type Aliases
+
+- `Sz`: `size_t`
+- `Pd`: `ptrdiff_t`
+- `Str`: `char[]`
+- `IStr`: `const(char)[]`
+- `Strz`: `char*`
+- `IStrz`: `const(char)*`
 
 ### WebAssembly
 
