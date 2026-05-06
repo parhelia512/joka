@@ -91,6 +91,13 @@ Copy-paste one of the [examples](./examples/) to make sure everything is working
 ## Documentation
 
 Start with the [examples](./examples/) folder for a quick overview.
+[DDOX](https://github.com/dlang/ddox) can also be used with:
+
+```sh
+git clone https://github.com/Kapendev/joka joka_package
+cd joka_package
+dub run -b ddox
+```
 
 ### Modules
 
