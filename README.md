@@ -104,6 +104,7 @@ dub run -b ddox
 - [`joka.io`](./source/joka/io.d): Input and output procedures
 - [`joka.math`](./source/joka/math.d): Mathematics
 - [`joka.memory`](./source/joka/memory.d): Memory utilities and containers
+- [`joka.microui`](./source/joka/microui.d): Rxi's UI library with Joka changes
 - [`joka.ranges`](./source/joka/ranges.d): Range utilities
 - [`joka.stdc`](./source/joka/stdc.d): C standard library functions
 - [`joka.types`](./source/joka/types.d): Common type definitions and ASCII strings
