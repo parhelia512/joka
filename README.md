@@ -362,7 +362,6 @@ For example, the `GrowingArena` type is using `jokaSystemMalloc` and `jokaSystem
 
 One cited reason for such a system is the ability to "intercept third-party code."
 Don't.
-It sounds nice, but it's an easy way to get leaky spaghetti code.
 A context system is essentially a global variable that you have to account for.
 It's like the PICO-8 API with its pen color, but for memory management and with scope magic.
 That's fine for a fantasy console.
