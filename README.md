@@ -123,7 +123,8 @@ dub run -b ddox
 - `JokaTypesStubs`: Removes the `string.h` dependency from the `types.d` module and uses internal stubs instead. Useful when working with WebAssembly.
 - `JokaMemoryStubs`: Removes the `stdlib.h` dependency from the `memory.d` module and uses internal stubs instead. Useful when working with WebAssembly.
 - `JokaMathStubs`: Removes the `math.h` dependency from the `math.d` module and uses internal stubs instead. Useful when working with WebAssembly.
-- `JokaMallocOnly`: Will not allow the use of single-allocation functions like `jokaMake*`.
+- `JokaMallocOnly`: Will not allow the use of some single-allocation functions like `jokaMake`.
+- `JokaPrintfOnly`: Will not allow the use of some `print`, `println`, and `printfln` style functions.
 - `WASM4`: Like `WASI`, but for the WASM-4 fantasy console.
 
 ### Types
